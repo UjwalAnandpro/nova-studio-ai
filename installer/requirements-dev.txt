@@ -1,5 +1,5 @@
 pytest>=7.0.0
 pytest-asyncio>=0.21.0
-black>=22.0.0
+black>=26.5.1
 ruff>=0.0.280
 mypy>=1.4.0
