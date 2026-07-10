@@ -77,6 +77,7 @@ nova-studio/
 │   ├── database/       # SQLite storage indexing & tables
 │   ├── logger/         # Rotating action logger
 │   └── plugins/        # swappable provider script loaders
+├── installer/          # One-Click Bootstrap Installer suite for Windows
 ├── plugins/            # folder-based SDK plugins (e.g. sample_plugin)
 ├── tests/              # unit test suites
 ├── app.py              # Streamlit dashboard
@@ -88,11 +89,20 @@ nova-studio/
 
 ## 🚀 Getting Started & Installation
 
-### Prerequisites
+### Option A: One-Click Bootstrap Installer (Windows Recommended)
+If you are on Windows 10 or 11, you can set up the entire project, venv, Python 3.12, Git, FFmpeg, and configurations automatically:
+1. Navigate to the `installer/` folder.
+2. Right-click **`setup.bat`** and select **"Run as administrator"**.
+3. Once the setup completes, double-click the new **"Launch Nova Studio AI"** shortcut on your Desktop!
+
+### Option B: Manual Installation
+If you prefer a manual setup or are on Linux:
+
+#### Prerequisites
 * **Python 3.10 or 3.11** installed.
 * **FFmpeg** installed and added to your system environment variables.
 
-### 1. Installation
+#### 1. Installation
 Clone the repository and install requirements inside a virtual environment:
 ```bash
 git clone https://github.com/<your-username>/nova-studio-ai.git
