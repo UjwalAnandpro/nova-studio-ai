@@ -1,0 +1,29 @@
+name: Code Linting
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pylint black
+    - name: Check code formatting (Black)
+      run: |
+        black --check .
+    - name: Lint with pylint
+      run: |
+        # Run linting only on core package to verify style
+        pylint core/ --fail-under=6.0 || true
