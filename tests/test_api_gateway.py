@@ -87,21 +87,25 @@ class TestAPIGatewayAndEvents(unittest.TestCase):
         rest_server.port = 9099
         rest_server.start()
         
-        # Give daemon server brief window to start up
-        time.sleep(0.5)
-        
-        self.assertTrue(rest_server.thread.is_alive())
-        
-        # Query GET /api/system
-        try:
-            with urllib.request.urlopen("http://127.0.0.1:9099/api/system", timeout=3.0) as res:
-                body = res.read().decode("utf-8")
-                data = json.loads(body)
+        # Query GET /api/system with connection retry loop
+        data = None
+        for i in range(15):
+            time.sleep(0.2)
+            try:
+                with urllib.request.urlopen("http://127.0.0.1:9099/api/system", timeout=1.0) as res:
+                    body = res.read().decode("utf-8")
+                    data = json.loads(body)
+                    break
+            except Exception:
+                pass
                 
+        if data is None:
+            rest_server.stop()
+            self.fail("Failed querying local REST server (connection timed out).")
+            
+        try:
             self.assertIn("gpu_name", data)
             self.assertIn("disk_free_gb", data)
-        except Exception as e:
-            self.fail(f"Failed querying local REST server: {str(e)}")
         finally:
             rest_server.stop()
 

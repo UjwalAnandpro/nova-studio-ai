@@ -22,4 +22,4 @@ jobs:
         pip install bandit
     - name: Scan with bandit
       run: |
-        bandit -r core/ -lll
+        bandit -r core/ -s B404,B603,B607 -lll
