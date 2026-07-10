@@ -890,7 +890,7 @@ elif st.session_state.current_tab == "Models":
         st.subheader("Checkpoint Models")
         st.caption("Verify physical files loaded under /models/checkpoints/")
         models_manager.scan_models()
-        chks = models_manager.list_models()
+        chks = models_manager.list_models_by_category("checkpoints")
         if chks:
             st.dataframe(chks)
         else:
