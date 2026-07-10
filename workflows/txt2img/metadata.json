@@ -1,0 +1,13 @@
+{
+    "name": "Image Generation",
+    "author": "Nova Studio AI",
+    "version": "1.0.0",
+    "category": "Image",
+    "tags": ["SDXL", "Local"],
+    "required_models": [
+        {"name": "sdxl_base_1.0.safetensors", "type": "checkpoints"}
+    ],
+    "supported_inputs": ["PROMPT", "WIDTH", "HEIGHT", "SEED", "STEPS", "CFG"],
+    "supported_outputs": ["image"],
+    "minimum_comfyui_version": "0.1.0"
+}

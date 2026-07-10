@@ -1,0 +1,13 @@
+{
+    "name": "Text To Video",
+    "author": "Nova Studio AI",
+    "version": "1.0.0",
+    "category": "Video",
+    "tags": ["SVD", "Local"],
+    "required_models": [
+        {"name": "svd_xt.safetensors", "type": "video_models"}
+    ],
+    "supported_inputs": ["PROMPT", "SEED", "STEPS"],
+    "supported_outputs": ["video"],
+    "minimum_comfyui_version": "0.1.0"
+}

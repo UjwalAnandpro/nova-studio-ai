@@ -1,0 +1,30 @@
+# Python compilation files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Database files
+*.db
+*.db-journal
+*.sqlite3
+
+# Local storage and cache
+storage/
+projects/
+cache/
+secret.key
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Visual Studio Code / IDEs settings
+.vscode/
+.idea/

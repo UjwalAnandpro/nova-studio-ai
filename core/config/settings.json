@@ -1,0 +1,22 @@
+{
+    "theme": "Dark",
+    "comfyui_address": "http://127.0.0.1:8188",
+    "llm_provider": "Ollama",
+    "tts_provider": "Kokoro",
+    "image_provider": "ComfyUI",
+    "video_provider": "ComfyUI",
+    "music_provider": "MusicGen",
+    "storage_path": "storage",
+    "cache_path": "cache",
+    "project_path": "projects",
+    "temp_path": "storage/temp",
+    "output_path": "storage/output",
+    "ffmpeg_path": "ffmpeg",
+    "gpu_settings": {
+        "enable_gpu": true,
+        "gpu_id": 0,
+        "precision": "fp16",
+        "low_vram": false
+    },
+    "extra_configs": {}
+}

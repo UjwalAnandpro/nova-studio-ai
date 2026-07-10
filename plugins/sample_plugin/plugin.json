@@ -1,0 +1,17 @@
+{
+    "id": "sample_plugin",
+    "name": "Sample Transitions Plugin",
+    "version": "1.0.0",
+    "author": "Nova Team",
+    "description": "A sample transitions plugin demonstrating events subscriptions.",
+    "category": "exporter",
+    "license": "MIT",
+    "minimum_app_version": "1.0.0",
+    "dependencies": [],
+    "permissions": {
+        "filesystem": true,
+        "network": false,
+        "gpu": false,
+        "external_processes": false
+    }
+}
