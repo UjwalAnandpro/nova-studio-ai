@@ -4127,3 +4127,17 @@
 2026-07-10 08:56:52 | VersionManager | SaveVersion | SUCCESS | 0.000s | Saved version snapshot timeline_1783654012.json (Snapshot 1)
 2026-07-10 08:56:52 | VersionManager | RestoreVersion | SUCCESS | 0.000s | Restored active timeline to timeline_1783654012.json
 2026-07-10 08:56:52 | Projects | Delete | SUCCESS | 0.000s | Deleted project 03f234f8_timeline_test_proj
+2026-07-10 09:43:55 | Config | LoadSettings | SUCCESS | 0.000s | Settings loaded from C:\Users\ujwal\.gemini\antigravity\scratch\nova-studio\core\config\settings.json
+2026-07-10 09:43:55 | Database | InitDB | SUCCESS | 0.000s | Database initialized at C:\Users\ujwal\.gemini\antigravity\scratch\nova-studio\storage\nova_studio.db
+2026-07-10 09:43:55 | Plugins | LoadAll | INFO | 0.000s | Starting dynamic plugin discovery...
+2026-07-10 09:43:55 | Plugins | LoadFile | SUCCESS | 0.000s | Loaded plugin 'ComfyUI Image' (image) from C:\Users\ujwal\.gemini\antigravity\scratch\nova-studio\core\plugins\plugin_comfyui.py
+2026-07-10 09:43:55 | Plugins | LoadFile | SUCCESS | 0.000s | Loaded plugin 'ComfyUI Video' (video) from C:\Users\ujwal\.gemini\antigravity\scratch\nova-studio\core\plugins\plugin_comfyui.py
+2026-07-10 09:43:55 | Plugins | LoadFile | SUCCESS | 0.000s | Loaded plugin 'Kokoro' (tts) from C:\Users\ujwal\.gemini\antigravity\scratch\nova-studio\core\plugins\plugin_kokoro.py
+2026-07-10 09:43:55 | Plugins | LoadFile | SUCCESS | 0.000s | Loaded plugin 'MusicGen' (music) from C:\Users\ujwal\.gemini\antigravity\scratch\nova-studio\core\plugins\plugin_musicgen.py
+2026-07-10 09:43:55 | Plugins | LoadFile | SUCCESS | 0.000s | Loaded plugin 'Ollama' (llm) from C:\Users\ujwal\.gemini\antigravity\scratch\nova-studio\core\plugins\plugin_ollama.py
+2026-07-10 09:43:55 | Plugins | LoadSDKFolder | SUCCESS | 0.000s | Loaded SDK folder plugin 'Sample Transitions Plugin' (exporter)
+2026-07-10 09:43:55 | WorkflowManager | Discover | INFO | 0.000s | Scanning workflows inside C:\Users\ujwal\.gemini\antigravity\scratch\nova-studio\workflows...
+2026-07-10 09:43:55 | WorkflowManager | Discover | SUCCESS | 0.000s | Discovered workflow 'Text To Video'
+2026-07-10 09:43:55 | WorkflowManager | Discover | SUCCESS | 0.000s | Discovered workflow 'Image Generation'
+2026-07-10 09:43:55 | ModelsManager | Scan | INFO | 0.000s | Scanning models under C:\Users\ujwal\.gemini\antigravity\scratch\nova-studio\models...
+2026-07-10 09:43:55 | ModelsManager | Scan | SUCCESS | 0.000s | Scan complete. Indexed 0 files.
