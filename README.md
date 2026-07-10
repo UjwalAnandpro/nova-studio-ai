@@ -89,13 +89,22 @@ nova-studio/
 
 ## 🚀 Getting Started & Installation
 
-### Option A: One-Click Bootstrap Installer (Windows Recommended)
-If you are on Windows 10 or 11, you can set up the entire project, venv, Python 3.12, Git, FFmpeg, and configurations automatically:
+### Option A: Professional Windows Installer compilation (Developers)
+To compile a single executable wizard (`NovaStudioAI_Setup.exe`) similar to VS Code:
+1. Navigate to the `installer_project/` folder.
+2. Run the build command:
+   ```powershell
+   .\build.bat
+   ```
+   *Requires PyInstaller and Inno Setup 6 compiler.*
+
+### Option B: One-Click Bootstrap Script (Windows Recommended)
+If you are on Windows 10 or 11, you can set up the entire project automatically:
 1. Navigate to the `installer/` folder.
 2. Right-click **`setup.bat`** and select **"Run as administrator"**.
 3. Once the setup completes, double-click the new **"Launch Nova Studio AI"** shortcut on your Desktop!
 
-### Option B: Manual Installation
+### Option C: Manual Installation
 If you prefer a manual setup or are on Linux:
 
 #### Prerequisites
