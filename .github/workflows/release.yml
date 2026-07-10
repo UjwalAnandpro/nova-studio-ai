@@ -1,0 +1,65 @@
+name: Publish Windows Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+        cache: 'pip'
+
+    - name: Install Build Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyinstaller psutil pillow
+        pip install -r requirements.txt
+
+    - name: Run Test Suite
+      run: |
+        python -m unittest discover tests
+
+    - name: Compile PyInstaller Executables
+      run: |
+        cd installer_project
+        python generate_ico.py
+        pyinstaller --clean --noconfirm launcher.spec
+        pyinstaller --clean --noconfirm setup_helper.spec
+        pyinstaller --clean --noconfirm uninstall_helper.spec
+
+    - name: Compile Inno Setup Installer
+      run: |
+        & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer_project/installer.iss
+
+    - name: Compute SHA-256 Checksum
+      run: |
+        $hash = Get-FileHash -Algorithm SHA256 installer_project/NovaStudioAI_Setup.exe
+        $hash.Hash + "  NovaStudioAI_Setup.exe" | Out-File -FilePath installer_project/SHA256SUMS.txt -Encoding utf8
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          installer_project/NovaStudioAI_Setup.exe
+          installer_project/SHA256SUMS.txt
+          CHANGELOG.md
+          LICENSE
+        name: "Nova Studio AI Release ${{ github.ref_name }}"
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

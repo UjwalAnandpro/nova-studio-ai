@@ -1,12 +1,16 @@
 # 🎬 Nova Studio AI
 
+[![Latest Release](https://img.shields.io/github/v/release/UjwalAnandpro/nova-studio-ai.svg)](https://github.com/UjwalAnandpro/nova-studio-ai/releases)
+[![Downloads](https://img.shields.io/github/downloads/UjwalAnandpro/nova-studio-ai/total.svg)](https://github.com/UjwalAnandpro/nova-studio-ai/releases)
 [![Python Support](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Streamlit UI](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io/)
-[![Build Status](https://github.com/nova-maintainers/nova-studio-ai/workflows/Run%20Tests/badge.svg)](.github/workflows/test.yml)
-[![Security Status](https://github.com/nova-maintainers/nova-studio-ai/workflows/Security%20Scan/badge.svg)](.github/workflows/security.yml)
+[![Build Status](https://github.com/UjwalAnandpro/nova-studio-ai/workflows/Run%20Tests/badge.svg)](.github/workflows/test.yml)
+[![Security Status](https://github.com/UjwalAnandpro/nova-studio-ai/workflows/Security%20Scan/badge.svg)](.github/workflows/security.yml)
 
 Nova Studio AI is a production-grade, local, and offline non-linear video creation workspace. It orchestrates a modular pipeline of AI Agents (Script, Voice, Storyboard, Timeline Compiler) to convert raw ideas into complete editable video exports.
+
+👉 **[Download the Standalone Windows Installer (.exe) from GitHub Releases](https://github.com/UjwalAnandpro/nova-studio-ai/releases)**
 
 ---
 
