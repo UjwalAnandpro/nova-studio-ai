@@ -31,26 +31,63 @@ nova-studio/
 └── README.md           # user guide
 ```
 
-## Quick Start Guide
+## How to Set Up and Run the Application
 
-### 1. Install Dependencies
-```powershell
+Follow these step-by-step instructions to get Nova Studio AI running on your local machine:
+
+### Prerequisites
+Make sure you have **Python 3.10 or 3.11** installed on your system.
+
+### 1. Clone the Repository
+Clone this repository to your local workspace:
+```bash
+git clone https://github.com/<your-username>/nova-studio-ai.git
+cd nova-studio-ai
+```
+
+### 2. Create a Virtual Environment (Recommended)
+Set up a clean virtual environment to prevent dependency conflicts:
+```bash
+# On Windows
+python -m venv venv
+venv\Scripts\activate
+
+# On Linux/macOS
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+Install all required libraries specified in requirements list:
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. Launch Studio UI
-```powershell
-python -m streamlit run app.py
-```
+### 4. Configure settings (Optional)
+On first run, the application will automatically initialize standard configuration folders and create an SQLite database. If you have custom executable paths (e.g., custom FFmpeg location or ComfyUI server port), you can edit the generated `core/config/settings.json` file or adjust them directly in the UI settings dashboard.
 
-### 3. Query Local REST API
+### 5. Launch the Streamlit Studio UI
+Start the Streamlit application server using:
+```bash
+streamlit run app.py
+```
+After executing this command, Streamlit will compile the server and output local network pointers:
+```text
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.1.100:8501
+```
+Your default browser should open automatically to **`http://localhost:8501`**. If it does not, copy and paste that address into your browser manually.
+
+### 6. Query Local REST API
 To verify the background REST Gateway is running:
 ```bash
 curl http://127.0.0.1:9000/api/system
 ```
 
 ## Running Verification Tests
-Execute the full test suite:
-```powershell
+To run the automated validation tests:
+```bash
 python -m unittest discover tests
 ```
