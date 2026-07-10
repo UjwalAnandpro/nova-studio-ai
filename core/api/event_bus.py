@@ -1,7 +1,7 @@
 import time
 import uuid
 import threading
-from typing import Dict, List, Any, Callable
+from typing import Dict, List, Any, Callable, Optional
 
 class Event:
     """Represents a standard event published inside the application."""
